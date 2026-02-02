@@ -8,6 +8,7 @@ import { Comparison } from './components/sections/Comparison';
 import { Insurers } from './components/sections/Insurers';
 import { FAQ } from './components/sections/FAQ';
 import { AiAssistant } from './components/sections/AiAssistant';
+import { Board } from './components/sections/Board';
 import { Contact } from './components/sections/Contact';
 
 function App() {
@@ -16,12 +17,13 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <AiAssistant />
         <Insurers />
         <InsuranceAudit />
         <InsuranceDiet />
         <Comparison />
         <FAQ />
-        <AiAssistant />
+        <Board />
         <Contact />
       </main>
       <Footer />

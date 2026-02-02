@@ -32,3 +32,5 @@ dist/
 .npm/
 .DS_Store
 .env
+.vercel
+.env*.local

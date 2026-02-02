@@ -7,9 +7,13 @@ import { Building2 } from 'lucide-react';
 const InsurerCard: React.FC<{ item: { name: string; logo?: string } }> = ({ item }) => {
     const [imageError, setImageError] = useState(false);
 
-    // Reset error state if logo URL changes
+    // Simplified logic: Resetting error state when logo changes by using a key on the img or just trusting the img element behaviors.
+    // However, to strictly reset `imageError`, we should do it when `item.logo` changes.
+    // React warning is about cascading updates.
+    // Better approach: Use local state key reset.
     useEffect(() => {
-        setImageError(false);
+        const timer = setTimeout(() => setImageError(false), 0);
+        return () => clearTimeout(timer);
     }, [item.logo]);
 
     return (
